@@ -1,6 +1,4 @@
-# WeatherApp
-
-# 🌦 Weather Forecast Project
+# 🌦 WeatherApp
 
 ## 📌 Overview
 This is a **responsive** weather forecasting web application that provides detailed weather insights. It includes predictions for the **next 5 days**, **Air Quality Index (AQI) levels**, **sunrise and sunset times**, and key weather parameters such as **pressure, visibility, and temperature changes throughout the day**.
