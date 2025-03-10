@@ -30,7 +30,6 @@ body{
 
 #magbar{
     height: 40px;
-  
     background-color:darkgoldenrod;
     margin-left: -55px;
     border-radius: 50%;
@@ -91,7 +90,7 @@ body{
 .city{
     height: 45vh;
     width: 65%;
-    border: 2px solid black;
+    
     display: flex;
     background-color: rgba(212,212,212,0.6);
     backdrop-filter: blur() ;
@@ -180,7 +179,7 @@ body{
 .parameters{
     height: 45vh;
     width: 33%;
-    border: 2px solid black;
+  
     background-color: rgba(212,212,212,0.6);
     backdrop-filter: blur() ;
     border-radius: 12px;
@@ -213,8 +212,7 @@ ul li{
 
 .dayOne{
     height: 30vh;
-    width: 19%;
-    border: 2px solid black;
+    width: 19%; 
     border-radius: 12px;
     background-color: rgba(212,212,212,0.7);
     backdrop-filter: blur() ;
@@ -261,7 +259,6 @@ ul li{
     background-color: aliceblue;
     height: 18vh;
     width: 90%;
-    border: 2px solid black;
     border-radius: 15px;
     background-color: rgba(212,212,212,0.7);
     backdrop-filter: blur() ;
@@ -300,8 +297,6 @@ ul li{
 .today{
     height: 37vh;
     width: 80%;
-    
-    border: 2px solid black;
     border-radius: 15px;
     background-color: rgba(212,212,212,0.7);
     backdrop-filter: blur() ;
@@ -328,7 +323,6 @@ ul li{
 .todayTime{
     height: 30vh;
     width: 30%;
-    border: 2px solid black;
     border-radius: 12px;
     background-color: rgba(212,212,212,0.7);
     backdrop-filter: blur() ;
