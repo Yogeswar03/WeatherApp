@@ -1,0 +1,434 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    
+}
+
+.comfortaa{
+    font-family: "Comfortaa", sans-serif;
+  }
+
+body{
+    background-image: url(./weatherbg.jpg);
+    background-size: cover;
+    background-attachment: fixed;  
+}
+
+.searchBar{
+    height: 10vh;
+    width: 100%;
+    
+}
+
+.searchCity{
+    height: 50px;
+    width: 60%;
+   
+    border-radius: 18px;
+    text-decoration: none;
+}
+
+#magbar{
+    height: 40px;
+  
+    background-color:darkgoldenrod;
+    margin-left: -55px;
+    border-radius: 50%;
+}
+
+#magbar:hover{
+    cursor: pointer;
+}
+
+#magbar:active{
+    
+    background-color: rgb(166, 141, 74);
+}
+
+.search{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+   
+}
+
+.maindiv{
+    height: 85vh;
+    width: 100%;
+    display: flex;
+    padding: 0px 25px 0px 25px;
+    justify-content: space-between;
+   
+    
+    
+}
+
+.mainParentdivLeft{
+    height: 82vh;
+    width: 65%;
+    border-radius: 15px;
+    margin-left: 100px;
+}
+.mainParentdivRight{
+    height: 82vh;
+    width: 45%;
+    border-radius: 15px;
+    
+
+}
+
+
+.tempdiv{
+    height: 45vh;
+    width: 90%;
+    border-radius: 12px;
+    margin: 10px 60px 10px 30px;
+    display: flex;
+    gap: 10px;
+}
+
+.city{
+    height: 45vh;
+    width: 65%;
+    border: 2px solid black;
+    display: flex;
+    background-color: rgba(212,212,212,0.6);
+    backdrop-filter: blur() ;
+    border-radius: 12px;
+    flex-wrap: wrap;
+}
+
+.cityName{
+    margin-left: 20px;
+    margin-top: 20px;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.date,.time{
+    font-weight: 400;
+    margin-top: 14px;
+    
+}
+.date{
+    margin-left: 5px;
+}
+
+.dates,.times{
+    height: 40px;
+    width: 32%;
+    display: flex;
+    margin-left:40px;
+    align-items: center;
+    justify-content: flex-end;
+
+}
+
+.times{
+  width:63px ;
+}
+.dates{
+    margin-left: 63px;
+}
+
+.timeIcon,.dateIcon{
+ margin-left: 15px;
+}
+
+.fl{
+    font-size: small;
+}
+.temp{
+    height: 35vh;
+    width: 90%;
+    display: flex;
+    margin-left: 18px;
+   
+}
+
+.temperature{
+    height: 25vh;
+    width: 55%;
+    margin-top: 15px;
+}
+
+#degrees{
+    font-size: 4rem;
+    margin-left: 20px;
+}
+
+#typetemp{
+    margin-left: 20px;
+    font-size: 1.3rem;
+    margin-top: -20px;
+}
+.winds{
+    display: flex;
+    margin-top: 35px;
+    margin-left: 40px;
+   flex-direction: column;
+}
+
+
+.wind{
+    display: flex;
+    margin-left: 10px;
+    margin-top: 12px;
+}
+
+.parameters{
+    height: 45vh;
+    width: 33%;
+    border: 2px solid black;
+    background-color: rgba(212,212,212,0.6);
+    backdrop-filter: blur() ;
+    border-radius: 12px;
+}
+
+ul li{
+    list-style-type:none;
+    margin-top: 15px;
+    margin-left: -20px;
+    display: flex;
+    gap: 20px;
+   
+}
+
+#imgs{
+    margin-right: 5px;
+}
+
+
+
+.nextTemp{
+    height: 30vh;
+    width: 90%;
+  
+    border-radius: 12px;
+    margin: 10px 20px 10px 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.dayOne{
+    height: 30vh;
+    width: 19%;
+    border: 2px solid black;
+    border-radius: 12px;
+    background-color: rgba(212,212,212,0.7);
+    backdrop-filter: blur() ;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#deg{
+    font-size: 2.5rem;
+}
+.sunriseBox{
+    height: 40vh;
+    width: 90%;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    margin-left: -50px;
+   
+}
+#aqi{
+    margin-left: 10px;
+    font-size: x-large;
+}
+
+.aqiOne{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: -15px;
+
+}
+
+.aqiTwo{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: -10px;
+
+}
+.sunrise, .sunset{
+    background-color: aliceblue;
+    height: 18vh;
+    width: 90%;
+    border: 2px solid black;
+    border-radius: 15px;
+    background-color: rgba(212,212,212,0.7);
+    backdrop-filter: blur() ;
+   
+}
+.SunandMoon{
+    display: flex;
+    justify-content: flex-start;
+}
+.SandS{
+    font-size: x-large ;
+    margin-left: 10px;
+}
+
+.sun ,.moon{
+    display: flex;
+    margin-top: -15px;
+    
+}
+.moon{
+    margin-left: 30px;
+}
+
+.sunriseTime , .sunsetTime{
+    height: 70px;
+    width: 100px;
+    padding: 1px 0px 15px 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#sunPic{
+    margin-top: 10px;
+}
+.today{
+    height: 37vh;
+    width: 80%;
+    
+    border: 2px solid black;
+    border-radius: 15px;
+    background-color: rgba(212,212,212,0.7);
+    backdrop-filter: blur() ;
+    margin-left: -27px;
+    margin-top: 7px;
+}
+
+.todaysTemp{
+    
+    display: flex;
+    margin-left: -87px;
+    margin-top: 7px;
+    flex-direction: row;
+
+}
+
+.nine{
+    display: flex;
+    margin-top: 20px;
+    margin-left: 10px;
+    flex-wrap: nowrap;
+}
+
+.todayTime{
+    height: 30vh;
+    width: 30%;
+    border: 2px solid black;
+    border-radius: 12px;
+    background-color: rgba(212,212,212,0.7);
+    backdrop-filter: blur() ;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 43px;
+    margin-left: 10px;
+}
+
+.vl{
+    border-left: 1px solid rgb(85, 83, 83);
+  height: 170px;
+}
+.todayTimeTemp{
+    display: flex;
+    justify-content: space-evenly;
+    margin-left: -5px;
+}
+
+@media (max-width: 768px) {
+    .maindiv {
+      flex-direction: column;
+      text-align: center;
+
+    }
+
+body{
+    overflow: scroll;
+    max-width:767px ;
+}
+
+.mainParentdivLeft{
+    margin-left: -30px;
+}
+
+.tempdiv{
+    display: flex;
+    flex-direction: column;
+}
+.city{
+    width: 160%;
+    margin-left: 15px;
+}
+.temp{
+    display: flex;
+    flex-direction: column;
+
+}
+
+#degrees , #typetemp{
+    margin-left: 80px;
+}
+
+.winds{
+    display: flex;
+    flex-direction: column;
+    margin-left: 5px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.parameters{
+    width: 160%;
+    margin-left: 15px;
+ 
+}
+.nextTemp{
+    margin-top: 350px;
+    width: 169%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 9px;
+    
+}
+
+.dayOne{
+    height: 160px;
+}
+
+.sunrise {
+    margin-top: 270px;
+    margin-left: 320px;
+    width: 230%;
+}
+
+.sunset{
+    margin-left: 320px;
+    width: 230%;
+}
+
+.today{
+    margin-top: 100px;
+    width: 230%;
+    height: 270px;
+    margin-left: -4px;
+}
+
+
+
+}
