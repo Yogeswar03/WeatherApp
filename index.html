@@ -28,7 +28,9 @@
          <div class="temp">
           <div class="temperature">
            <p id="degrees"><span id="tempp">30</span>&deg;C</p>
-            <p id="typetemp">sunny<span id="pic"></span></p>
+           <div class="mainTyp">
+            <p id="typetemp">sunny</p><span id="pic"><img id="mainType" src="./lightrain.png" height="30px" width"30px"></span>
+           </div>
           </div>
           <div class="winds">
            <div class="dates">
@@ -49,47 +51,53 @@
          
         <div class="parameters">
            <ul class="para">
+        
             <li>
             <img id="imgs" src="./feels like.png" width="20px" height="20px">     Feels Like <p><span id="fl">28</span> &deg;C</p></li>
             <hr class="line">
             <li>
-            <img id="imgs" src="./visibility.png" width="20px" height="20px">     Visibility <p id="vs">1000</p></li>
+            <img id="imgs" src="./visibility.png" width="20px" height="20px">     Visibility <p><span id="vs">1000</span>m</p></li>
             <hr class="line">
             <li>
-            <img  id="imgs" src="./humidity.png" width="20px" height="20px">      Humidity <p id="hu">200</p></li>
+            <img  id="imgs" src="./humidity.png" width="20px" height="20px">      Humidity <p><span id="hu">20</span>%</p></li>
             <hr class="line">
             <li>
-            <img  id="imgs" src="./pressure.png" width="20px" height="20px">      Pressure  <p id="pa">140</p></li>
+            <img  id="imgs" src="./pressure.png" width="20px" height="20px">      Pressure  <p ><span id="pa">140</span>hPa</p></li>
             <hr class="line">
            </ul>
            
         </div>
         </div>
         <div class="nextTemp">
-          <div class="dayOne ">
+          <div class="dayOne wea3">
             <p id="one">Tuesday</p>
-             <p><span id="degOne">32</span>&deg;C</p>
-            <p id="typeOne">Sunny</p>
+             <p><span id="degOne">25</span>&deg;C</p>
+             <img id="weaOne" src="./clouds.png" height="30px" width"30px">
+            <p id="typeOne">rainy</p>
           </div>
           <div class="dayOne ">
             <p id="two">Wednesday</p>
              <p><span id="degTwo">30</span>&deg;C</p>
+             <img id="weaTwo" src="./lightrain.png" height="30px" width"30px">
             <p id="typeTwo">Sunny</p>
           </div>
-          <div class="dayOne">
+          <div class="dayOne ">
             <p id="three">Thrusday</p>
-             <p><span id="degThree">28</span>&deg;C</p>
-            <p id="typeThree">cloudsy</p>
+             <p><span id="degThree">30</span>&deg;C</p>
+             <img id="weaThree" src="./lightrain.png" height="30px" width"30px">
+            <p id="typeThree">windy</p>
           </div>
           <div class="dayOne ">
             <p id="four">Friday</p>
-             <p><span id="degFour">33</span>&deg;C</p>
+             <p><span id="degFour">30</span>&deg;C</p>
+             <img id="weaFour" src="./lightrain.png" height="30px" width"30px">
             <p id="typeFour">Sunny</p>
           </div>
           <div class="dayOne ">
             <p id="five">Saturday</p>
-            <p><span id="degFive">27</span>&deg;C</p>
-            <p id="typeFive">windy</p>
+            <p><span id="degFive">30</span>&deg;C</p>
+            <img id="weaFive"src="./lightrain.png" height="30px" width"30px">
+            <p id="typeFive">Sunny</p>
           </div>
         </div>
      </div>
@@ -138,7 +146,7 @@
         <ul class="mobile">
          <li id="twelveAm">12AM</li>
          <li ><p><span id="twelveAmDeg">30</span>&deg;C</p></li>
-         <li><img src="clouds.png" height="30px" width"30px"></li>
+         <li><img id="four"src="clouds.png" height="30px" width"30px"></li>
          <li id="typeof">Haze</li>
         </ul>
        </div>
@@ -156,7 +164,7 @@
         <ul class="mobile">
          <li id="threePm">3PM</li>
          <li ><p><span id="threePmDeg">30</span>&deg;C</p></li>
-         <li><img src="clouds.png" height="30px" width"30px"></li>
+         <li><img id="five"src="clouds.png" height="30px" width"30px"></li>
          <li id="typeofThreePm">Haze</li>
         </ul>
        </div>
@@ -165,7 +173,7 @@
         <ul class="mobile">
           <li id="sixPm">6PM</li>
          <li ><p><span id="sixPmDeg">30</span>&deg;C</p></li>
-         <li><img src="clouds.png" height="30px" width"30px"></li>
+         <li><img id="pic1"src="clouds.png" height="30px" width"30px"></li>
          <li id="typeofsixPm">Haze</li>
         </ul>
        </div>
@@ -174,7 +182,7 @@
         <ul class="mobile">
         <li id="ninePm">9PM</li>
          <li ><p><span id="ninePmDeg">30</span>&deg;C</li>
-         <li><img src="clouds.png" height="30px" width"30px"></li>
+         <li><img id="pic2"src="clouds.png" height="30px" width"30px"></li>
          <li id="typeofNinePm">Haze</li>
         </ul>
        </div>
@@ -182,7 +190,8 @@
        </div>
       </div>
      </div>
-    
+
+   
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
     <script src="script.js"></script>
