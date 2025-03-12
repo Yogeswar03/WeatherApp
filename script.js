@@ -1,3 +1,5 @@
+
+
 function dateFormat(timestamp){
     const date = new Date(timestamp * 1000);
     // console.log(date.toUTCString());
@@ -22,17 +24,75 @@ async function fetchAQIData(lat,lon){
   
 }
 
-async function nextday(){
+     
+     
+
+async function nextday() {
     let cityName = document.querySelector('.searchCity').value;
     let fetchNextDay = await fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&appid=b2a57b658561c20700f091517d595e7e`);
     let formattedData = await fetchNextDay.json();
-    console.log("data",formattedData);
+    console.log("data", formattedData);
 
     function getWeekday(dateString) {
-        const date = new Date(dateString);  // Convert string to Date object
-        const options = { weekday: 'long' }; // Get full weekday name
+        const date = new Date(dateString);
+        const options = { weekday: 'long' };
         return new Intl.DateTimeFormat('en-US', options).format(date);
     }
+
+    // **Fix: Select images correctly**
+    let images = [
+        document.querySelector("#pic #mainType"),
+        document.querySelector("#weaOne"),
+        document.querySelector("#weaTwo"),
+        document.querySelector("#weaThree"),
+        document.querySelector("#weaFour"),
+        document.querySelector("#weaFive"),
+        document.querySelector(".mobile #four"),
+        document.querySelector(".mobile #nineAAm"),
+        document.querySelector(".mobile #five"),
+        document.querySelector(".mobile #pic1"),
+        document.querySelector(".mobile #pic2"),
+       
+    ];
+
+    let forecastIndices = [0,5, 13, 21, 29, 37 , 0 , 1, 2,3,4];
+
+    // **Fix: Assign weather images correctly**
+    forecastIndices.forEach((index, i) => {
+        if (!formattedData.list[index]) return;
+
+        let weatherCondition = formattedData.list[index].weather[0].main.toLowerCase();
+        console.log(`Day ${i + 1} Weather:`, weatherCondition);
+
+        if (images[i]) {
+            switch (weatherCondition) {
+                case 'clear':
+                    images[i].src = './clearSky.png';
+                    break;
+                case 'clouds':
+                    images[i].src = './clouds.png';
+                    break;
+                case 'rain':
+               
+                    images[i].src = './lightrain.png';
+                    break;
+                   
+                case 'snow':
+                    images[i].src = './snow.png';
+                    break;
+                case 'haze':
+                    images[i].src = './clouds.png';
+                    break;
+                default:
+                    images[i].src = './clearSky.png';
+                    break;
+            }catch (error) {
+        console.error("Error fetching weather data:", error);
+        alert(error.message);
+        }
+    });
+
+
 
     // dayOne //
 
@@ -146,6 +206,9 @@ async function fetchData(){
     let cityName = document.querySelector('.searchCity').value;
     let reqData= await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=05c925d37167b83fb6891a97ecc99178`);
     let formattedData = await reqData.json();
+    if (!reqData.ok) {
+            throw new Error('City not found or API error');
+        }
     let responseCityName = formattedData.name;
     let responseTemp = formattedData.main.temp;
     let celsius = Math.floor((responseTemp - 273.15));
