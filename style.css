@@ -23,9 +23,9 @@ body{
 .searchCity{
     height: 50px;
     width: 60%;
-   
+    outline: none;
     border-radius: 18px;
-    text-decoration: none;
+    border: none;
 }
 
 #magbar{
