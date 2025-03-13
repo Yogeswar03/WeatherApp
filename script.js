@@ -86,9 +86,7 @@ async function nextday() {
                 default:
                     images[i].src = './clearSky.png';
                     break;
-            }catch (error) {
-        console.error("Error fetching weather data:", error);
-        alert(error.message);
+            }
         }
     });
 
@@ -206,10 +204,12 @@ async function fetchData(){
     let cityName = document.querySelector('.searchCity').value;
     let reqData= await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=05c925d37167b83fb6891a97ecc99178`);
     let formattedData = await reqData.json();
-    if (!reqData.ok) {
-            throw new Error('City not found or API error');
-        }
+    
     let responseCityName = formattedData.name;
+    if (!reqData.ok) {
+        throw new Error('City not found or API error');
+    }
+
     let responseTemp = formattedData.main.temp;
     let celsius = Math.floor((responseTemp - 273.15));
     let skyDes=formattedData.weather[0].description;
@@ -254,6 +254,5 @@ async function fetchData(){
     
     nextday();
    
-    
- }
+  }
 
